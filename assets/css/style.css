@@ -1,8 +1,13 @@
 .bg-custom{
-    background: rgb(238,174,202);
-background: radial-gradient(circle, rgba(238,174,202,1) 7%, rgba(148,187,233,1) 100%);
+    background: rgb(245,159,196);
+background: radial-gradient(circle, rgba(245,159,196,1) 66%, rgba(218,148,233,1) 97%);
 }
 .navbar-brand,
-.nav-link{
+.nav-link,
+.nav-item{
     color: aliceblue;
+}
+button
+{
+    color: #d46beb;
 }
