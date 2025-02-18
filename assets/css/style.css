@@ -1,3 +1,18 @@
+/* *{
+    outline: solid red;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
 .bg-custom{
     background: rgb(245,159,196);
 background: radial-gradient(circle, rgba(245,159,196,1) 66%, rgba(218,148,233,1) 97%);
@@ -10,4 +25,7 @@ background: radial-gradient(circle, rgba(245,159,196,1) 66%, rgba(218,148,233,1)
 button
 {
     color: #d46beb;
+}
+body{
+    background-color: rgb(250, 224, 215);
 }
