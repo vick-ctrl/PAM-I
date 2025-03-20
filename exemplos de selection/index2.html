@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <title>selecionar elementos </title>
+</head>
+<body>
+    <button onclick="addVeiculo1()"> Add fusca </button>
+    <button onclick="addVeiculo2()"> Add ferrari </button>
+    <button onclick="addVeiculo3()"> Add Uno</button>
+    <button onclick="addVeiculo4()"> Add avião  </button>
+    
+<div id="estacionamento"></div>
+
+<script>
+ function addVeiculo1() {
+     
+    let veiculo_1 = document.createElement('h1');
+     veiculo_1.innerText = 'fusca';
+     veiculo_1.style.color = 'pink';
+     veiculo_1.style.backgroundColor = 'black';
+     veiculo_1.style.fontSize = '40px';
+     veiculo_1.style.fontFamily = "Tangerine";
+
+     let foto = document.createElement('img');
+     foto.setAttribute ('src', 'https://balconistasa.com/wp-content/uploads/2022/07/IMAGEM-2.jpg');
+
+     document.querySelector('#estacionamento').appendChild(veiculo_1)
+     document.querySelector('#estacionamento').appendChild(foto)
+    
+ }
+
+
+ function addVeiculo2() {
+     
+     let veiculo_2 = document.createElement('h1');
+      veiculo_2.innerText = 'ferrari';
+      veiculo_2.style.color = 'red';
+      veiculo_2.style.backgroundColor = 'black';
+      veiculo_2.style.fontSize = '40px';
+      veiculo_2.style.fontFamily = "Tangerine";
+
+      let foto = document.createElement('img');
+     foto.setAttribute ('src', 'https://fotos-jornaldocarro-estadao.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2024/03/25023905/Ferrari-Londres-1.jpg');
+     
+     document.querySelector('#estacionamento').appendChild(veiculo_2)
+     document.querySelector('#estacionamento').appendChild(foto)
+
+
+ }
+
+ function addVeiculo3() {
+     
+     let veiculo_3 = document.createElement('h1');
+      veiculo_3.innerText = 'uno';
+      veiculo_3.style.color = 'white';
+      veiculo_3.style.backgroundColor = 'black';
+      veiculo_3.style.fontSize = '40px';
+      veiculo_3.style.fontFamily = "Tangerine";
+
+      let foto = document.createElement('img');
+     foto.setAttribute ('src', 'https://ciadocarrobn.com.br/wp-content/uploads/2025/01/9d25c577d428435fa6ff1a4731aa3fe2_1737490284985.jpg');
+     
+     document.querySelector('#estacionamento').appendChild(veiculo_3)
+     document.querySelector('#estacionamento').appendChild(foto)
+ }
+
+ function addVeiculo4() {
+     
+     let veiculo_4 = document.createElement('h1');
+      veiculo_4.innerText = 'avião';
+      veiculo_4.style.color = 'blue';
+      veiculo_4.style.backgroundColor = 'gray';
+      veiculo_4.style.fontSize = '40px';
+      veiculo_4.style.fontFamily = "Tangerine";
+
+      
+      let foto = document.createElement('img');
+     foto.setAttribute ('src', 'https://t.ctcdn.com.br/XBjoqig9COaA6GJXQ3xE8dB_Kpw=/640x360/smart/i321185.jpeg');
+     
+     document.querySelector('#estacionamento').appendChild(veiculo_4)
+     document.querySelector('#estacionamento').appendChild(foto)
+ }
+</script>
+
+</body>
+</html>
