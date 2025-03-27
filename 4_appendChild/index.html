@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarto dos Horrores </title>
+</head>
+<body>
+    
+
+    <img src="int_ligado.png"  id="interruptor" onclick="acionarInterruptor()">
+    <img src="lamp_ligada.png"  id="lampada" onclick="ligarLampada()">
+
+    <script>
+    let acionado = true
+    
+        function acionarInterruptor(){
+            
+            let interruptor = document.querySelector('#interruptor');
+            let lampada = document.querySelector('#lampada')
+            let body = document.querySelector('body');
+           
+            if (acionado == true ){
+                interruptor.setAttribute('src' ,'./int_desligado.png');
+                lampada.setAttribute('src', './lamp_desligada.png');
+                body.style.backgroundColor = 'black';
+                
+            }
+            else{
+                interruptor.setAttribute('src' ,'./int_ligado.png');
+                lampada.setAttribute('scr', './lamp_ligada.png');
+                body.style.backgroundColor = 'white';
+                
+            }
+             acionado = !acionado
+        }
+        
+    </script>
+   
+</body>
+</html>
