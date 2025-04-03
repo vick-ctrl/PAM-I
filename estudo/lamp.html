@@ -8,7 +8,7 @@
 <body>
 <img src="./interruptor_ligado.png" id="interruptor" onclick="acionarInterruptor()">
 <img src="lampada_ligada.png" id="lampada"  onclick="acionarInterruptor()">
-
+<img src="copia_bluezao.jpg" id="bluezao">
 <script>
     let acionado = true;
 
@@ -16,16 +16,24 @@ function acionarInterruptor(){
     let interruptor = document.querySelector('#interruptor');
     let lampada = document.querySelector('#lampada');
     let body = document.querySelector('body');
+    let bluezao = document.querySelector('#bluezao');
+
 
     if (acionado == true){
-        interruptor.setAttribute('src', './interruptor_desligado.png');
-        lampada.setAttribute('src', './lampada_desligada.png');
-        body.style.backgroundColor = 'black';
+   interruptor.setAttribute('src', './iterruptor_desligado.png');
+        lampada.setAttribute('src', './lampada_desligada.png' );
+        bluezao.setAttribute('src', './bluezao.jpg' );
+           body.style.backgroundColor = 'black' 
+           body.style.background = 'url("./bluezao.jpg")';
+        
 
     }else{
-        interruptor.setAttribute('src', './interruptor_ligado.png');
-        lampada.setAttribute('src', './lampada_ligada.png');
-        body.style.backgroundColor = 'white';
+       interruptor.setAttribute('src', './interruptor_ligado.png')
+            lampada.setAttribute('src', './lampada_ligada.jpg');
+            bluezao.setAttribute('src', './copia_bluezao.jpg');
+            body.style.backgroundColor = 'white'
+            body.style.background = 'url("./copia_bluezao.jpg")';
+
     }
     acionado = !acionado;
 }
