@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Selecionar Elemento</title>
+</head>
+<body>
+
+    <button onclick="addVeiculo1()">Adicionar Fusca</button>
+    <button onclick="addVeiculo2()">Adicionar Ferrari</button>
+    <button onclick="addVeiculo3()">Adicionar Mitsubishi </button>
+    <button onclick="addVeiculo4()">Adicionar Avião</button>
+    
+    <div id="estacionamento"></div>
+
+<script>
+
+    function addVeiculo1(){
+    let veiculo_1 = document.createElement('h1');
+    veiculo_1.innerText = 'Fusca';
+    veiculo_1.style.color = 'Purple';
+    veiculo_1.style.backgroundColor = 'Yellow';
+    veiculo_1.style.fontSize = '28px';
+    veiculo_1.style.fontFamily = 'Pacifico';
+
+    let imagem = document.createElement('img');
+    imagem.setAttribute('src', 'https://images-americanas.b2w.io/produtos/7441555482/imagens/brinquedo-fusca-colecao-miniatura-friccao-abre-as-portas-escala-1-32-amarelo/7441555482_1_large.jpg');
+
+
+    document.querySelector('#estacionamento').appendChild(veiculo_1);
+    document.querySelector('#estacionamento').appendChild(imagem);
+   }
+
+   function addVeiculo2(){
+    let veiculo_2 = document.createElement('h1');
+    veiculo_2.innerText = 'Ferrari';
+    veiculo_2.style.color = 'Red';
+    veiculo_2.style.backgroundColor = 'Gray';
+    veiculo_2.style.fontSize = '28px';
+    veiculo_2.style.fontFamily = 'Pacifico';
+
+    let imagem = document.createElement('img');
+    imagem.setAttribute('src', 'https://autoinforme.com.br/wp-content/uploads/2016/06/ferrari-458.jpg');
+
+    document.querySelector('#estacionamento').appendChild(veiculo_2);
+    document.querySelector('#estacionamento').appendChild(imagem);
+}
+
+function addVeiculo3(){
+    let veiculo_3 = document.createElement('h1');
+    veiculo_3.innerText = 'Mitsubishi ';
+    veiculo_3.style.color = 'Blue';
+    veiculo_3.style.backgroundColor = 'lightGreen';
+    veiculo_3.style.fontSize = '28px';
+    veiculo_3.style.fontFamily = 'Pacifico';
+    
+    let imagem = document.createElement('img');
+    imagem.setAttribute('src', 'https://curitibacity.car.blog/wp-content/uploads/2020/06/eclipse-1.jpg');
+
+    document.querySelector('#estacionamento').appendChild(veiculo_3);
+    document.querySelector('#estacionamento').appendChild(imagem);
+}
+   
+function addVeiculo4(){
+    let veiculo_4 = document.createElement('h1');
+    veiculo_4.innerText = 'Avião';
+    veiculo_4.style.color = 'Pink';
+    veiculo_4.style.backgroundColor = 'black';
+    veiculo_4.style.fontSize = '28px';
+    veiculo_4.style.fontFamily = 'Pacifico';
+
+    let imagem = document.createElement('img');
+    imagem.setAttribute('src', 'https://passageirodeprimeira.b-cdn.net/wp-content/uploads/2020/04/Eva-Air-A330-Executiva-Business-Class-0-1024x768.jpeg');
+
+    document.querySelector('#estacionamento').appendChild(veiculo_4);
+    document.querySelector('#estacionamento').appendChild(imagem);
+}
+   
+   
+</script>
+
+</body>
+</html>

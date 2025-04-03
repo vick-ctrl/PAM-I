@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    let horas = 0;
+    let minutos = 0;
+    let segundos = 0;
+    let timer = document.createElement('h1');
+    timer = document.createElement('h1');
+    setInterval(() => {
+        segundos ++;
+        if(segundos % 2 == 0){
+           document.querySelector('body').style.backgroundColor = 'pink';
+        }else{
+            document.querySelector('body').style.backgroundColor = 'lightblue'; 
+        }
+
+        if(segundos > 59){
+            minutos++;
+            segundos++;
+            minutos = 0;
+
+        }if(minutos > 59){
+            horas++;
+            minutos = 0;
+        }
+
+        timer.innerText = (horas + ':' + minutos + ':' + segundos)
+    }, 1000);
+
+    document.querySelector('body').appendChild(timer);
+</script>
+
+</body>
+</html>
