@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Personagens</title>
+
+  <style>
+    #container {
+      border: 2px solid black;
+      width: 300px;
+      padding: 20px;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+    img {
+      width: 150px;
+      height: 100px;
+      margin-top: 5px;
+    }
+    p {
+      margin: 5px 0;
+    }
+  </style>
+
+</head>
+<body>
+  <div id="container"></div>
+
+  <script>
+    let personagens = [
+      {
+        nome: "Deadpool",
+        peso: "80kg",
+        altura: "1.90m",
+        poder: "Regenerar",
+        profissao: "Assasino de Aluguel",
+        foto: "https://th.bing.com/th/id/OIP.u-GIn3wQst3iaGmlHJHWOwHaEo?rs=1&pid=ImgDetMain"
+      },
+      {
+        nome: "",
+        peso: "90kg",
+        altura: "1.90m",
+        poder: "Superforça",
+        profissao: "Soldado",
+        foto: "https://th.bing.com/th/id/OIP.JtrzjWYQTMRpdd-N3c-tugHaEK?rs=1&pid=ImgDetMain"
+      }
+    ];
+
+    let container = document.getElementById("container");
+
+    personagens.forEach(function(p) {
+      if (p.nome) {
+        let nome = document.createElement("p");
+        nome.innerHTML = "<strong>Nome:</strong> " + p.nome;
+        container.appendChild(nome);
+      }
+
+      if (p.peso) {
+        let peso = document.createElement("p");
+        peso.innerHTML = "<strong>Peso:</strong> " + p.peso;
+        container.appendChild(peso);
+      }
+
+      if (p.altura) {
+        let altura = document.createElement("p");
+        altura.innerHTML = "<strong>Altura:</strong> " + p.altura;
+        container.appendChild(altura);
+      }
+
+      if (p.poder) {
+        let poder = document.createElement("p");
+        poder.innerHTML = "<strong>Poder:</strong> " + p.poder;
+        container.appendChild(poder);
+      }
+
+      if (p.profissao) {
+        let profissao = document.createElement("p");
+        profissao.innerHTML = "<strong>Profissão:</strong> " + p.profissao;
+        container.appendChild(profissao);
+      }
+
+      if (p.foto) {
+        let fotoTitulo = document.createElement("p");
+        fotoTitulo.innerHTML = "<strong>Foto:</strong>";
+        container.appendChild(fotoTitulo);
+
+        let img = document.createElement("img");
+        img.src = p.foto;
+        container.appendChild(img);
+      }
+
+      
+      let br = document.createElement("br");
+      container.appendChild(br);
+    });
+  </script>
+</body>
+</html>
+
+ 
+</body>
+</html>
