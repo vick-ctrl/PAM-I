@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let escola = {
+            professores: ['Prof. Diogo', 'Prof. Ricardo'],
+            alunos: ['Victória', 'Geovanna'],
+            materias: ['Programação Web', 'Quimica']
+        }
+    
+        escola.professores.push('Prof. Julia');
+        escola.alunos.push('Kety')
+        escola.materias.push('Ed.Fisica')
+    
+        console.log('Professores:')
+        escola.professores.forEach(function(professores){
+            console.log(professores)
+        });
+    
+        console.log('\n' + 'Alunos:')
+        escola.alunos.forEach(function(alunos){
+            console.log(alunos)
+        });
+    
+        
+        console.log('\n' + 'Materias:')
+        escola.materias.forEach(function(materias){
+            console.log(materias)
+        });
+    
+    </script>
+</body>
+</html>
