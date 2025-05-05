@@ -7,7 +7,20 @@
 </head>
 <body>
     <script>
-        zoologico = [];
+      let zoologico = [];
+    
+        zoologico.push('Girafa')
+        zoologico.push('Porco')
+        zoologico.push('Macaco')
+        zoologico.push('Leão')
+        zoologico.push('Pinguim')
+    
+        zoologico.unshift('Hipopotamo');
+        zoologico.pop();
+    
+        zoologico.forEach(function(zoologico){
+            console.log(zoologico)
+        });  
 
         
     </script>
