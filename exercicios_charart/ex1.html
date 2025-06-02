@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=script, initial-scale=1.0">
+    <title>exercicio 1</title>
+    
+</head>
+<body>
+    <script>
+        function obterIniciais(nomeCompleto) {
+    let nomes = nomeCompleto.split(" ");
+    let iniciais = nomes.map(nome => nome[0]).join(" ");
+    return iniciais;
+}
+
+let nome = prompt('Digite o nome completo');
+console.log(obterIniciais(nome));
+
+    </script>
+</body>
+</html>

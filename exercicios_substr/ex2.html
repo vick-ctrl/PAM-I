@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 2</title>
+</head>
+<body>
+    <script>
+        let cpf = "377.888.288-00";
+
+
+let parte1 = cpf.substr(0, 3);
+let parte2 = cpf.substr(4, 3);
+let parte3 = cpf.substr(8, 3);
+let parte4 = cpf.substr(12, 2);
+
+
+let cpfNormal = parte1 + parte2 + parte3 + parte4;
+
+console.log(`CPF sem formatação: ${cpfNormal}`);
+
+    </script>
+</body>
+</html>

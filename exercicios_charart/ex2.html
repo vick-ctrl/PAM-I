@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function contarOcorrencias(texto, caractere) {
+    let contador = 0;
+    for (let i = 0; i < texto.length; i++) {
+        if (texto[i].toLowerCase() === caractere.toLowerCase()) { 
+            contador++;
+        }
+    }
+    return contador;
+}
+
+let texto = prompt('Digite uma string');
+let caractere = prompt('Digite o caractere que deseja contar');
+
+console.log(`Número de ocorrências de '${caractere}': ${contarOcorrencias(texto, caractere)}`);
+
+    </script>
+</body>
+</html>

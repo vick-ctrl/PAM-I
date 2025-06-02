@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 3</title>
+</head>
+<body>
+    <script>
+        function criarNome(nome, sobrenome) {
+    if (nome.length >= 3 && sobrenome.length >= 3) {
+        return {
+            Nome: nome,
+            Sobrenome: sobrenome,
+            NomeCompleto: `${nome} ${sobrenome}`
+        };
+    } else {
+        return "Erro: O nome e o sobrenome devem ter pelo menos 3 caracteres cada.";
+    }
+}
+
+let nome = prompt('Digite o primeiro nome');
+let sobrenome = prompt('Digite o sobrenome');
+
+console.log(criarNome(nome, sobrenome));
+
+    </script>
+</body>
+</html>

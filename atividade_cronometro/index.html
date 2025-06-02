@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title> Atividade Cronômetro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .cronometro {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .tempo {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="cronometro">
+    <div class="tempo" id="tempo">00:00:00</div>
+    <button onclick="iniciar()">Iniciar</button>
+    <button onclick="parar()">Parar</button>
+    <button onclick="zerar()">Zerar</button>
+</div>
+
+<script>
+    let segundos = 0;
+    let minutos = 0;
+    let horas = 0;
+    let intervalo = null;
+
+    function atualizarTempo() {
+        segundos++;
+        if (segundos === 60) {
+            segundos = 0;
+            minutos++;
+        }
+        if (minutos === 60) {
+            minutos = 0;
+            horas++;
+        }
+
+        
+        let s = segundos < 10 ? '0' + segundos : segundos;
+        let m = minutos < 10 ? '0' + minutos : minutos;
+        let h = horas < 10 ? '0' + horas : horas;
+
+        document.getElementById('tempo').innerText = `${h}:${m}:${s}`;
+    }
+
+    function iniciar() {
+        if (!intervalo) {
+            intervalo = setInterval(atualizarTempo, 1000);
+        }
+    }
+
+    function parar() {
+        clearInterval(intervalo);
+        intervalo = null;
+    }
+
+    function zerar() {
+        parar();
+        segundos = 0;
+        minutos = 0;
+        horas = 0;
+        document.getElementById('tempo').innerText = "00:00:00";
+    }
+</script>
+
+</body>
+</html>

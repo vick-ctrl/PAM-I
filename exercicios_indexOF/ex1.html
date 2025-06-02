@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 1</title>
+</head>
+<body>
+    <script>
+        function jogoForca(palavra) {
+    let tentErradas = 0;
+    let maxTentativas = 3;
+
+    while (tentErradas < maxTentativas) {
+        let letra = prompt('Digite uma letra:');
+
+        
+        if (palavra.indexOf(letra) !== -1) {
+            console.log(` Acertou! A letra '${letra}' existe na palavra`);
+        } else {
+            tentErradas++;
+            console.log(` Errou! Você ainda tem ${maxTentativas - tentErradas} tentativas`);
+        }
+
+        if (tentErradas === maxTentativas) {
+            console.log("Você perdeu!");
+            break;
+        }
+    }
+}
+
+let palavra = prompt('Digite a palavra :');
+jogoForca(palavra);
+
+
+    </script>
+</body>
+</html>
