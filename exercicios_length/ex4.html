@@ -7,7 +7,29 @@
 </head>
 <body>
     <script>
-      
+      let numero = "1599655555"; 
+
+function validarNumero(num) {
+    
+    let str = num.toString();
+   
+    let caracteres = str.split('');
+
+    for (let i = 0; i < caracteres.length; i++) {
+        let charCode = caracteres[i].charCodeAt(0);
+        if (charCode < 48 || charCode > 57) {
+            return "Número inválido! digite apenas números.";
+        }
+    }
+    if (caracteres.length < 10) {
+        return "Número inválido! quantidade insuficiente de dígitos.";
+    }
+
+    return "Número válido.";
+}
+
+console.log(validarNumero(numero));
+
     </script>
 </body>
 </html>
