@@ -1,0 +1,29 @@
+<script>
+    let map = new Map();
+    map.set('nome','Junoveva');
+    map.set('idade','20');
+    map.set('telefone','12345');
+    map.set('cpf','33345');
+
+    console.log(map);
+
+    //verificar se existe uma Chave
+    console.log(map.has('nome'));
+
+    //remover uma Chave
+    map.delete('cpf');
+    console.log(map);
+
+    //verifica as quantidades de chaves
+    console.log(map.size);
+
+    //Faz a interação das chaves do Map Object
+    for (key of map.keys()){
+        console.log(key);
+    }
+
+    //Faz interação dos valores do Map Object
+    for(value of map.values()) {
+        console.log(value);
+    }
+</script>
